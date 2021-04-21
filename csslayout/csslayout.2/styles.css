@@ -1,0 +1,29 @@
+.father {
+  height: 200vh;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: repeat(2, 100px) 300px 300px;
+  grid-template-areas:
+    "header header header header"
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer";
+}
+
+.header {
+  background-color: teal;
+  grid-area: header;
+}
+.content {
+  background-color: yellow;
+  grid-area: content;
+}
+.nav {
+  background-color: yellowgreen;
+  grid-area: nav;
+}
+.footer {
+  background-color: red;
+  grid-area: footer;
+}
