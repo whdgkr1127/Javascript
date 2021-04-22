@@ -1,0 +1,67 @@
+.father {
+  display: grid;
+  height: 50vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template:
+    "header header content content" 1fr
+    "header header content content" 1fr
+    "nav nav footer-1 footer-2" 1fr
+    "nav nav footer-3 footer-4" 1fr/1fr 1fr 1fr 1fr;
+  place-items: center center;
+}
+.header {
+  background-color: mistyrose;
+  grid-area: header;
+  padding: 97px 200px;
+  font-size: 40px;
+  font-weight: 600;
+  color: tomato;
+}
+.content {
+  background-color: mediumseagreen;
+  grid-area: content;
+  padding: 97px 200px;
+  font-size: 40px;
+  font-weight: 600;
+}
+.nav {
+  background-color: tomato;
+  grid-area: nav;
+  padding: 96px 200px;
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+.footer-1 {
+  background-color: thistle;
+  grid-area: footer-1;
+  padding: 48px 100px;
+  font-size: 20px;
+  font-weight: 600;
+  color: tomato;
+}
+.footer-2 {
+  background-color: lightskyblue;
+  grid-area: footer-2;
+  padding: 48px 100px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+.footer-3 {
+  background-color: yellow;
+  grid-area: footer-3;
+  padding: 48px 100px;
+  font-size: 20px;
+  font-weight: 600;
+  color: tomato;
+}
+.footer-4 {
+  background-color: coral;
+  grid-area: footer-4;
+  padding: 48px 100px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
