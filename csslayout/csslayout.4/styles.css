@@ -1,0 +1,68 @@
+p {
+  font-size: 50px;
+  text-align: center;
+}
+.father {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
+  grid-template-rows: repeat(2, 500px);
+  grid-auto-flow: column;
+}
+
+.item-title {
+  display: grid;
+  justify-items: center;
+  align-content: space-between;
+  text-align: center;
+}
+@media screen and (max-width: 2000px) and (max-width: 2500px) {
+  .father {
+    display: grid;
+    grid-template-columns: repeat(4, 400px);
+    grid-template-columns: repeat(3, 500px);
+  }
+}
+@media screen and (min-width: 2501px) {
+  .father {
+    display: grid;
+    grid-template-columns: repeat(5, 400px);
+    grid-template-columns: repeat(3, 500px);
+  }
+}
+
+.item:first-child {
+  background-color: burlywood;
+}
+.item:nth-child(2) {
+  background-color: tomato;
+}
+.item:nth-child(3) {
+  background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA3MTJfMjk2%2FMDAxNTMxMzY5NDMwODg5.oYOnzHK3Y2FWOhQkp7JJZC2oLRlHHQJ9XxeLd93qKewg.vbZYcozF7CGo5hzF2fnbcCvIrqF8PioZ052sgl2E3kMg.JPEG.gohamcalli%2FIMG_20180622_211120_556.jpg&type=sc960_832");
+}
+.item:nth-child(4) {
+  background-color: turquoise;
+}
+.item:nth-child(5) {
+  background-color: yellowgreen;
+}
+.item:nth-child(6) {
+  background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA3MTJfMjk2%2FMDAxNTMxMzY5NDMwODg5.oYOnzHK3Y2FWOhQkp7JJZC2oLRlHHQJ9XxeLd93qKewg.vbZYcozF7CGo5hzF2fnbcCvIrqF8PioZ052sgl2E3kMg.JPEG.gohamcalli%2FIMG_20180622_211120_556.jpg&type=sc960_832");
+}
+.item:nth-child(7) {
+  background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA3MTJfMjk2%2FMDAxNTMxMzY5NDMwODg5.oYOnzHK3Y2FWOhQkp7JJZC2oLRlHHQJ9XxeLd93qKewg.vbZYcozF7CGo5hzF2fnbcCvIrqF8PioZ052sgl2E3kMg.JPEG.gohamcalli%2FIMG_20180622_211120_556.jpg&type=sc960_832");
+}
+.item:nth-child(8) {
+  background-color: pink;
+}
+.item:nth-child(9) {
+  background-color: powderblue;
+}
+.item:nth-child(10) {
+  background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA3MTJfMjk2%2FMDAxNTMxMzY5NDMwODg5.oYOnzHK3Y2FWOhQkp7JJZC2oLRlHHQJ9XxeLd93qKewg.vbZYcozF7CGo5hzF2fnbcCvIrqF8PioZ052sgl2E3kMg.JPEG.gohamcalli%2FIMG_20180622_211120_556.jpg&type=sc960_832");
+}
+.item:nth-child(11) {
+  background-color: mediumseagreen;
+}
+.item:nth-child(12) {
+  background-color: mediumslateblue;
+}
