@@ -6,10 +6,10 @@ const clockContainer = document.querySelector(".js-clock"),
         const minute = date.getMinutes();
         const hours = date.getHours();
         const seconds = date.getSeconds();
-        clockTitle.innerText = `${hours < 10 ? `0${hours}`:hours}:${minute < 10 ? `0${minute}`:minute}:${seconds < 10 ? `0${seconds}`:seconds}`;
+        clockTitle.innerText = `${hours < 10 ? `0${hours}`:hours}:${minute < 10 ? `0${minute}`:minute}:${seconds < 10 ? `0${seconds}`:seconds }`;
    
         if(seconds >= 50){
-            clockTitle.innerText.style.color = "red";
+            clockTitle.style.color = "red";
         }else{
             clockTitle.style.color = "black";
         }
@@ -21,4 +21,4 @@ function init(){
     setInterval(getTime,1000);
 }
 init();
-console.dir(window);
+console.dir(clockTitle);
