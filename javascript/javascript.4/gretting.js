@@ -30,7 +30,7 @@ function paintGreeting(text){
 function loadName(){
 const currentUser = localStorage.getItem(USER_LS);
 if(currentUser == null){
-   askForName();
+   askForName(); 
 }else{
     paintGreeting(currentUser);
 }
@@ -42,7 +42,3 @@ loadName()
 }
 init();
 
-const a = 1;
-const b = 2;
-
-console.log(a+b);
