@@ -12,7 +12,8 @@ function paintImage(imgNumber){
 
 
 function genRandom(){
-    const number = Math.floor(Math.random()*IMG_NUMBER); //Math.floor()는 소수점을 제외 출력한다. 0 <= Math.random() < 1
+    const number = Math.floor(Math.random()*IMG_NUMBER); 
+    //Math.floor()는 소수점을 제외 출력한다. 0 <= Math.random() < 1
     return number;
 }
 
