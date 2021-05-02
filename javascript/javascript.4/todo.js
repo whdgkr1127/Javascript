@@ -56,7 +56,7 @@ function handleSubmit(event){
         const loadedToDos = localStorage.getItem(TODOS_LS)
         if(loadedToDos !== null){
             const parsedToDos = JSON.parse(loadedToDos);
-            parsedToDos.forEach(function(todo){//foreach 메서드는 function안에 아무글자나 적어도 상관없고 paintToDo앞에 같은 인자만 넣어주면 된다.
+            parsedToDos.forEach(function(todo){//foreach 메서드는 array 객체에서만 사용이 가능하며 function안에 아무글자나 적어도 상관없고 paintToDo앞에 같은 인자만 넣어주면 된다.
                 paintToDo(todo.text);
             })
 
