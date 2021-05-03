@@ -6,11 +6,11 @@ const COORDS = "coords"
 
 
 function getWeather(lat,lng){
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`)//fetch() 안에 가져올 데이터를 넣어주면된다.
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`)//fetch() 안에 가져올 데이터를 넣어주면된다. 해당 URL에서 데이터를 요청한다.
     .then(function(response){
-        return response.json();
+        return response.json(); //fetch()를 통해 데이터를 받아서 사용하기 위해서는 response.json()를 사용해서 스트림이 완료될때 까지 읽는다.
     })
-    .then(function(json){
+    .then(function(json){// 데이터를 모두 읽은후에 출력할때 사용하는 코드이다.
         const temperature = json.main.temp;
         const place = json.name;
         weather.innerText = `${temperature} @ ${place}`;
@@ -30,6 +30,7 @@ function handleGeoSuccess(position){//위치정보를 수락했을 경우 해당
     }
     saveCoords(coordsObj);
     getWeather(latitude, longitude)
+
 }
 
 function handleGeoError(){//수락하지 않았을 경우 아래와 같은 문구가 출력됨.
@@ -46,7 +47,7 @@ function loadCoords(){
     if(loadedCoords == null){
         askForCoords();
     }else{
-        const parsedCoords = JSON.parse(loadedCoords);
+        const parsedCoords = JSON.parse(loadedCoords);//JSON.parse()는 문자열을 object로 바꿔준다.
         getWeather(parsedCoords.latitude, parsedCoords.longitude)
         // console.log(parsedCoords)
     }
